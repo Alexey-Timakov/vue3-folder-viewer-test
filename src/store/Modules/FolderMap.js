@@ -87,12 +87,10 @@ export default {
       const findItemToAdd = (arr, itemId) => {
         arr.forEach((element, index) => {
           if (element.id === itemId && !element.elements) {
-            console.log("add file")
             const newFile = {name: "New File", id: Math.floor(Math.random()* 10000)}; 
             arr.splice(index + 1, 0, newFile);
           }
           if (element.id === itemId && element.elements) {
-            console.log("add folder")
             const newFolder = {name: "New Folder", id: Math.floor(Math.random()* 10000), elements: []};
             arr.splice(index + 1, 0, newFolder);
           }
